@@ -27,3 +27,17 @@ function spinWords(string){
       return newString.join(' ');
     }
   }
+
+  //BETTER SOLUTION
+
+  function spinWords(words){
+    return words.split(' ').map(function (word) {
+      return (word.length > 4) ? word.split('').reverse().join('') : word;
+    }).join(' ');
+  }
+
+  /*splitting original string by ' ', so converting to ordered list of substrings
+  so we have an array then mapping over each item in the array and applying the
+  function which is a ternary on length.  This will split the word into a smaller
+  array if length is greater than 4 and reverse the order then combine back into a
+  string with join*/
