@@ -5,3 +5,9 @@ function getMiddle(s) {
   let middle = s.length / 2
   return (s.length % 2 === 0) ? s[middle-1]+s[middle] : s[Math.floor(middle)]
 }
+
+//Alternative solution
+
+function getMiddle(s) {
+  return s.substr(Math.ceil(s.length / 2 - 1), s.length % 2 === 0 ? 2 : 1);
+}
