@@ -7,10 +7,7 @@ function alphabetPosition(text) {
     //what is the conversion from alpha to numeric?
     //charCodeAt is the UTF-16 code unit, starts A at 65
     let numericConv = [];
-    let i = -1;
-    const textLower = text.toLowerCase()
-    for (let letter of textLower) {
-      i++;
+    for (let letter of text.toLowerCase()) {
       if (letter.match(/[a-z]/i)) {
         numericConv.push(letter.charCodeAt(0) - 96)
       }
