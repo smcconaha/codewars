@@ -17,3 +17,9 @@ function cakes(recipe, available) {
     const maxCakes = Math.floor(Math.min(...cakeArr))
     return maxCakes ? maxCakes : 0;
   }
+
+  //More simply solution
+
+  const cakes = (needs, has) => Math.min(
+    ...Object.keys(needs).map(key => Math.floor(has[key] / needs[key] || 0))
+  )
